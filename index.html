@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Makes the app responsive on all devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Daily Tasks</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Main application -->
+    <main class="todo-app">
+
+        <!-- App heading -->
+        <header class="app-header">
+
+            <div>
+                <p class="eyebrow">MY PRODUCTIVITY</p>
+
+                <h1>Daily Tasks</h1>
+
+                <p class="subtitle">
+                    Organize your day, one task at a time.
+                </p>
+            </div>
+
+            <!-- Task counter -->
+            <div class="task-counter">
+                <span id="taskCount">0</span>
+                <small>Tasks</small>
+            </div>
+
+        </header>
+
+
+        <!-- Add task section -->
+        <section class="add-task">
+
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="What needs to be done?"
+                maxlength="100"
+            >
+
+            <button id="addBtn">
+                + Add Task
+            </button>
+
+        </section>
+
+
+        <!-- Filter buttons -->
+        <nav class="filters">
+
+            <button class="filter-btn active" data-filter="all">
+                All
+            </button>
+
+            <button class="filter-btn" data-filter="active">
+                Active
+            </button>
+
+            <button class="filter-btn" data-filter="completed">
+                Completed
+            </button>
+
+        </nav>
+
+
+        <!-- Task list -->
+        <section class="task-section">
+
+            <ul id="taskList"></ul>
+
+            <!-- Empty message -->
+            <div id="emptyMessage" class="empty-message">
+
+                <div class="empty-icon">📝</div>
+
+                <h2>No tasks yet</h2>
+
+                <p>
+                    Add a task above and start being productive!
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Bottom controls -->
+        <footer class="app-footer">
+
+            <span id="remainingTasks">
+                0 tasks remaining
+            </span>
+
+            <button id="clearCompleted">
+                Clear completed
+            </button>
+
+        </footer>
+
+    </main>
+
+
+    <!-- JavaScript file -->
+    <script src="script.js"></script>
+
+</body>
+</html>
